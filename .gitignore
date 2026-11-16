@@ -1,0 +1,28 @@
+# 构建产物
+x64/
+Debug/
+Release/
+*.obj
+*.ilk
+*.pdb
+*.res
+*.tlog
+*.log
+*.idb
+*.aps
+
+# 自检截图（build.bat 每次运行生成）
+selfcheck.bmp
+
+# Visual Studio 用户文件
+.vs/
+*.user
+*.suo
+*.sdf
+*.opensdf
+
+# 提交包
+*.zip
+
+# 本地构建状态标记（build.bat 每次运行后写入，便于判断是否真的成功）
+build.status

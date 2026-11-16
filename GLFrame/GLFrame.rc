@@ -1,0 +1,46 @@
+// GLFrame.rc -- resource script.
+//
+// Every character in this file is ASCII on purpose: rc.exe reads the file
+// with the ANSI code page, so Chinese comments here would be mangled and
+// could corrupt the following declarations. The Chinese window title is
+// set from MainFrm.cpp instead (sources are compiled with /utf-8).
+
+#include <windows.h>
+#include "Resource.h"
+
+/////////////////////////////////////////////////////////////////////////////
+// Menu
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Reset View\tR",              ID_VIEW_RESET
+        MENUITEM SEPARATOR
+        MENUITEM "Depth &0",                    ID_DEPTH_0
+        MENUITEM "Depth &1",                    ID_DEPTH_1
+        MENUITEM "Depth &2",                    ID_DEPTH_2
+        MENUITEM "Depth &3",                    ID_DEPTH_3
+        MENUITEM "Depth &4",                    ID_DEPTH_4
+        MENUITEM "Depth &5",                    ID_DEPTH_5
+        MENUITEM "Depth &6",                    ID_DEPTH_6
+    END
+END
+
+/////////////////////////////////////////////////////////////////////////////
+// String table
+//
+// IDR_MAINFRAME is used by the single-document template. The value is a
+// 7-field string separated by \n:
+//   window title | doc root | new doc name | filter name | filter ext |
+//   registry file type | type description
+// All six \n must be present, otherwise MFC cannot resolve the title.
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "3D Sierpinski Gasket\n\nGasket\n\n\nGasket.Document\nGasket.Document"
+END

@@ -1,0 +1,12 @@
+# Batch files must keep CRLF, otherwise cmd.exe fails to parse them.
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+*.sln text eol=crlf
+
+# Everything else is fine with LF in the repository.
+*.h text eol=lf
+*.cpp text eol=lf
+*.rc text eol=lf
+*.md text eol=lf
+*.vcxproj text eol=lf
